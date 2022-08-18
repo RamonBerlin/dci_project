@@ -1,0 +1,409 @@
+:root {
+  --rota-speed: 15s;
+  --fColor: #a6ecf8;
+  --bgColor: #0b232e;
+  --size: 7vh;
+  --distance: 7vh;
+  --size-half: calc(0.5 * var(--size));
+  --size-half-negative: calc(-0.5 * var(--size));
+  --font-size: calc(0.4 * var(--size));
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  color: var(--fColor);
+  font-family: "Maven Pro", sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bgColor);
+  background-image: url(/img/Diamond-Stag.png);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 80vh;
+}
+
+main {
+  padding-bottom: 1%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+th {
+  color: #4dd7e6;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+}
+
+table,
+th,
+td {
+  table-layout: auto;
+  border: 2px solid rgb(255, 255, 255);
+  border-collapse: collapse;
+  width: 80%;
+  padding: 10px;
+  margin: auto;
+}
+
+/* ________________header-begin________________________________ */
+
+/* __navbar__ */
+.navbar {
+  display: flex;
+  width: 6.5%;
+  height: 10%;
+  transform-style: preserve-3d;
+}
+
+/* _Menü_ */
+.menu {
+ 
+  border-radius: 0vw 1vw 1vw 0vw;
+  backdrop-filter: blur(50px);
+  color: var(--fColor);
+  box-shadow: 1px 1px 10px #30637a, -1px -1px 10px #46c4ff;
+  position: absolute;
+  z-index: 100;
+  padding: 1% 0%;
+  /* visibility: hidden; */
+  text-align: center;
+  opacity: 0;
+}
+
+.navbar:hover ~ .menu,
+.menu:hover {
+  width: min-content;
+  height: auto;
+  visibility: visible;
+  padding: 1% 2%;
+  opacity: 1;
+  transition: all 1.5s;
+}
+
+.menu > a {
+  display: block;
+  font-size: 2rem;
+  text-align: center;
+  padding:2% 0%;
+  width: 100%;
+}
+
+
+.side > a {
+  color: whitesmoke;
+}
+
+.menu > a:hover {
+  color: #246b8b;
+  text-align: center;
+  
+}
+
+/* _CUBE_*/
+
+.cube {
+  display: flex;
+  margin: var(--distance);
+  position: relative;
+  animation: cube-rotation var(--rota-speed) linear infinite;
+  transform-style: inherit;
+}
+
+@keyframes cube-rotation {
+  0% {
+    transform: rotatex(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotatex(360deg) rotateY(-360deg);
+  }
+}
+
+.side {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./img/proxy.jpg);
+  background-size: cover;
+  opacity: 1;
+  font-size: var(--font-size);
+}
+
+.side > a:not(.front > a) {
+  transform: rotate(45deg);
+}
+
+.front > a {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+}
+
+.logo {
+  display: flex;
+  margin: auto;
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+}
+
+div:hover > .side {
+  background-image: none;
+  background-color: rgba(70, 131, 180, 0.562);
+}
+
+/* logo */
+.side.front {
+  transform: translatex(-50%) translateY(-50%) translateZ(var(--size-half));
+}
+
+.side.back {
+  transform: translatex(-50%) translateY(-50%)
+    translateZ(var(--size-half-negative)) scalex(-1);
+}
+
+.side.top {
+  transform: translatex(-50%) translateY(calc(-50% + var(--size-half-negative)))
+    rotateX(90deg);
+}
+
+.side.bottom {
+  transform: translatex(-50%) translateY(calc(-50% +var(--size-half)))
+    rotateX(-90deg);
+}
+
+.side.left {
+  transform: translatex(calc(-50% + var(--size-half-negative))) translateY(-50%)
+    rotateY(-90deg);
+}
+
+.side.right {
+  transform: translatex(calc(-50% + var(--size-half))) translateY(-50%)
+    rotateY(90deg);
+}
+
+/* __________________________________header-end________________________________ */
+
+/*___________________________________main-begin________________________________ */
+
+/*________________Content_____________ */
+
+.maincontent,
+.player_content {
+  margin: auto;
+  margin-bottom: 2%;
+  padding: 2%;
+  font-size: 1rem;
+  backdrop-filter: blur(5px);
+  box-shadow: 1px 1px 10px #30637a, -1px -1px 10px #46c4ff;
+}
+
+.maincontent {
+  display: flex;
+  width: 40%;
+  min-height: 20vh;
+  align-items: center;
+  background-color: #143c4ee5;
+  border-radius: 1vw;
+  backdrop-filter: blur(5px);
+  justify-content: center;
+}
+
+.player_content {
+  display: block;
+  font-family: "Maven Pro", sans-serif;
+  width: 50%;
+  background-color: #143c4ee5;
+  border-radius: 1vw;
+  backdrop-filter: blur(5px);
+}
+
+
+.videoContent{
+  width:100%;
+  
+}
+
+td:not(.tbName) {
+  text-align: center;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: #a0d4ec1d;
+}
+tbody > tr:hover{
+  background-color: #0b232e;
+}
+
+/* ________________linktree________________ */
+
+.link_list {
+  width: 50vw;
+  padding-top: 2.5rem;
+  margin: auto;
+}
+
+.icon {
+  display: flex;
+  filter: invert(100%);
+  position: absolute;
+  padding-top: 0.4vh;
+  height: 90%;
+  width: 15%;
+}
+
+.li_tree {
+  width: 100%;
+  height: 7vh;
+  margin: auto;
+  margin-top: 3vh;
+  list-style: none;
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  background-color: #143c4ec2;
+
+  box-shadow: 1px 1px 10px #30637a, -1px -1px 10px #46c4ff;
+}
+
+.a_link {
+  -webkit-text-stroke: 2px black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 4vh;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding-top: 1vh;
+}
+
+.li_tree:hover {
+  backdrop-filter: blur(3px);
+  background-color: #143c4e8e;
+  box-shadow: -1px -1px 10px #30637a, -1px 1px 10px #46c4ff;
+}
+
+.a_link:hover {
+  font-size: 3.9vh;
+  padding-top: 1.1vh;
+  color: #b2e5ee;
+}
+
+
+/*_____________________________ video_________________________________ */
+
+.utube {
+  display: inline-flexbox;
+  margin: auto;
+  margin-bottom: 5%;
+  padding: 2%;
+  width: 40%;
+  font-size: 1.5rem;
+  min-height: 60vh;
+  align-items: center;
+  background-color: #143c4ee5;
+  border-radius: 1vw;
+  backdrop-filter: blur(5px);
+  box-shadow: 1px 1px 10px #30637a, -1px -1px 10px #46c4ff;
+  justify-content: center;
+}
+
+
+
+.video{
+  width:100%;
+ height:25vw;
+}
+
+
+
+/* __________________________impressum_________________________ */
+
+.impressum {
+  font-size: 1rem;
+}
+
+/* _____________________________________@media_____________________________ */
+
+@media only screen and (max-width: 769px) {
+  .menu {
+    display: flexbox;
+    position: absolute;
+    z-index: 100;
+    visibility: hidden;
+    width: 0%;
+    height: 100%;
+    padding: 10% 0%;
+  }
+
+  .navbar {
+    width: 20%;
+    height: 100%;
+    visibility: visible;
+    padding: 1% 2%;
+  }
+
+  .navbar:hover ~ .menu,
+  .menu:hover {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    padding: 5% 5%;
+    transition: all 2s;
+  }
+
+  .video{
+    width:100%;
+   height:56vw;
+  }
+
+
+  .link_list,
+  .maincontent,
+  .utube,
+  .player_content {
+    
+    width: 90vw;
+  }
+
+
+
+ 
+  .menu > a {
+    /* visibility: hidden; */
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    right: 100%;
+    height: 7%;
+  }
+
+  .navbar:hover~.menu>a{
+    visibility: visible;
+    transition-delay: 1s;
+  }
+
+
+
+}
+
+

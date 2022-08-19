@@ -59,7 +59,9 @@ td {
   width: 80%;
   padding: 10px;
   margin: auto;
+  box-shadow: 3px 3px  black, inset 3px 3px black;
 }
+
 
 /* ________________header-begin________________________________ */
 
@@ -73,7 +75,7 @@ td {
 
 /* _Menü_ */
 .menu {
- 
+  background-color: #143c4e84;
   border-radius: 0vw 1vw 1vw 0vw;
   backdrop-filter: blur(50px);
   color: var(--fColor);
@@ -81,7 +83,6 @@ td {
   position: absolute;
   z-index: 100;
   padding: 1% 0%;
-  /* visibility: hidden; */
   text-align: center;
   opacity: 0;
 }
@@ -104,15 +105,13 @@ td {
   width: 100%;
 }
 
-
 .side > a {
   color: whitesmoke;
 }
 
 .menu > a:hover {
   color: #246b8b;
-  text-align: center;
-  
+  text-align: center;  
 }
 
 /* _CUBE_*/
@@ -171,7 +170,6 @@ div:hover > .side {
   background-color: rgba(70, 131, 180, 0.562);
 }
 
-/* logo */
 .side.front {
   transform: translatex(-50%) translateY(-50%) translateZ(var(--size-half));
 }
@@ -237,10 +235,8 @@ div:hover > .side {
   backdrop-filter: blur(5px);
 }
 
-
 .videoContent{
   width:100%;
-  
 }
 
 td:not(.tbName) {
@@ -248,7 +244,7 @@ td:not(.tbName) {
 }
 
 tbody > tr:nth-child(odd) {
-  background-color: #a0d4ec1d;
+  background-color: #fafbfb1b;
 }
 tbody > tr:hover{
   background-color: #0b232e;
@@ -280,7 +276,6 @@ tbody > tr:hover{
   backdrop-filter: blur(10px);
   border-radius: 30px;
   background-color: #143c4ec2;
-
   box-shadow: 1px 1px 10px #30637a, -1px -1px 10px #46c4ff;
 }
 
@@ -308,7 +303,6 @@ tbody > tr:hover{
   color: #b2e5ee;
 }
 
-
 /*_____________________________ video_________________________________ */
 
 .utube {
@@ -327,14 +321,10 @@ tbody > tr:hover{
   justify-content: center;
 }
 
-
-
 .video{
   width:100%;
  height:25vw;
 }
-
-
 
 /* __________________________impressum_________________________ */
 
@@ -376,17 +366,12 @@ tbody > tr:hover{
    height:56vw;
   }
 
-
   .link_list,
   .maincontent,
   .utube,
   .player_content {
-    
     width: 90vw;
   }
-
-
-
  
   .menu > a {
     /* visibility: hidden; */
@@ -401,9 +386,6 @@ tbody > tr:hover{
     visibility: visible;
     transition-delay: 1s;
   }
-
-
-
 }
 
 

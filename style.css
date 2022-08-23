@@ -218,7 +218,7 @@ div:hover > .side {
 .maincontent {
   display: flex;
   width: 40%;
-  min-height: 20vh;
+  min-height: 100%;
   align-items: center;
   background-color: #143c4ee5;
   border-radius: 1vw;
@@ -260,7 +260,7 @@ tbody > tr:hover{
 
 .icon {
   display: flex;
-  filter: invert(100%);
+  /* filter: invert(100%) sepia(69%) saturate(1626%) hue-rotate(179deg) brightness(110%) contrast(91%); */
   position: absolute;
   padding-top: 0.4vh;
   height: 90%;
@@ -328,9 +328,9 @@ tbody > tr:hover{
 
 /* __________________________impressum_________________________ */
 
-.impressum {
+/* .impressum {
   font-size: 1rem;
-}
+} */
 
 /* _____________________________________@media_____________________________ */
 

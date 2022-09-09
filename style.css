@@ -24,7 +24,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: var(--bgColor);
-  background-image: url(/img/Diamond-Stag.png);
+  background-image: url(/img/Diamond-Stag2.png);
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -105,7 +105,7 @@ td {
   width: 100%;
 }
 
-.side > a {
+.side > p {
   color: whitesmoke;
 }
 
@@ -140,17 +140,17 @@ td {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(./img/proxy.jpg);
+  background-image: url(./img/proxy2.jpg);
   background-size: cover;
   opacity: 1;
   font-size: var(--font-size);
 }
 
-.side > a:not(.front > a) {
+.side > p:not(.front > p) {
   transform: rotate(45deg);
 }
 
-.front > a {
+.front > p {
   align-items: center;
   display: flex;
   justify-content: center;
